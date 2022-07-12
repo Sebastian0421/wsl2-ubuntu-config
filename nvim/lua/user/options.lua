@@ -58,12 +58,20 @@ vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 vim.cmd 'source ~/.config/nvim/option.vim'
 
 -- WSL yank support
-vim.cmd [[
-let s:clip = '/mnt/c/Windows/System32/clip.exe' 
-if executable(s:clip)
-    augroup WSLYank
-        autocmd!
-        autocmd TextYankPost * if v:event.operator ==# 'Y' | call system(s:clip, @0) | endif
-    augroup END
-endif
-]]
+-- vim.cmd [[
+-- let s:clip = '/mnt/c/Windows/System32/clip.exe' 
+-- if executable(s:clip)
+--     augroup WSLYank
+--         autocmd!
+--         autocmd TextYankPost * if v:event.operator ==# 'Y' | call system(s:clip, @0) | endif
+--     augroup END
+-- endif
+-- ]]
+if vim.fn.has('wsl') then
+  vim.cmd[[
+  augroup Yank
+  autocmd!
+  autocmd TextYankPost * :call system('/mnt/c/Windows/System32/clip.exe',@")
+  augroup END
+  ]]
+end
