@@ -194,8 +194,9 @@ return packer.startup(function(use)
   use "SirVer/ultisnips"
 
   -- tmux
-  -- use "aserowy/tmux.nvim"
+  use "aserowy/tmux.nvim" --copy from neovim to neovim to tmux
   -- use "ravenxrz/tmux-plugin-sysstat"
+  
 
   -- Debugger
   use "ravenxrz/DAPInstall.nvim" -- help us install several debuggers
