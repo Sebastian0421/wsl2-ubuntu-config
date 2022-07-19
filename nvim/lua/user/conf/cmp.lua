@@ -194,7 +194,7 @@ cmp_config = {
       buffer = "(Buffer)",
       spell = "(Spell)",
       tag = "(Tag)",
-      cmp_matlab = "(MT)"
+      cmp_matlab = "(MT)",
     },
     duplicates = {
       buffer = 1,
@@ -220,7 +220,8 @@ cmp_config = {
       -- For `vsnip` users.
       vim.fn["vsnip#anonymous"](args.body)
       -- For `luasnip` users.
-      -- require('luasnip').lsp_expand(args.body)
+      -- 自定义代码片段
+      require('luasnip').lsp_expand(args.body)
 
       -- For `ultisnips` users.
       vim.fn["UltiSnips#Anon"](args.body)
@@ -237,7 +238,7 @@ cmp_config = {
     { name = "nvim_lsp" },
     { name = "nvim_lsp_signature_help" },
     { name = "path" },
-    --{ name = "luasnip" },
+    { name = "luasnip" },
     { name = "cmp_tabnine" },
     { name = "nvim_lua" },
     { name = "buffer" },
@@ -246,7 +247,7 @@ cmp_config = {
     { name = "emoji" },
     { name = "treesitter" },
     { name = "crates" },
-    { name = "cmp_vsnip" },
+    { name = "vsnip" },
     { name = "cmp_nvim_ultisnip" },
     { name = "cmp_nvim_tags" },
     { name = "cmp_matlab"},
