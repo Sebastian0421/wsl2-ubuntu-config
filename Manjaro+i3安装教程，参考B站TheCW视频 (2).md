@@ -215,6 +215,9 @@
    >安装微信
    >sudo pacman -S yay base-devel
    >yay -S wechat-uos
+   >
+   >神器albert
+   >yay -S albert
 
 
 9. 蓝牙连接问题
