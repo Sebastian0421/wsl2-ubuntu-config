@@ -186,21 +186,36 @@
 
    >sudo pacman -S ranger
    >
-   >sudo pacman -S wine-wechat
+   >sudo pacman -S tmux
    >
    >sudo pacman -S net ease-cloud-music
    >
    >sudo pacman -S deepen-screenshot
    >
-   >sudo pacman -S chromium
+   >sudo pacman -S google-chrome
+   >
+   >yay -S motrix 下载工具
+   >
+   >yay -S xdman
+   >
+   >安装cider播放器,联动apple music
+   >sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+   >flatpak install flathub sh.cider.Cider
+   >
+   >yay -S clash-for-windows-bin 更改系统网络代理，将所有改为127.0.0.1，端口自定义，但要和clash中一致
    >
    >sudo pacman -S typora
+   >
+   >yay -S ttf-wps-fonts wps-office-mui-zh-cn wps-office-mime-cn wps-office-cn ttf-ms-fonts 安装wps
    >
    >sudo pacman -S vlc
    >
    >sudo pacman -S timeshift
    >
-   >sudo pacman -S xdman
+   >安装微信
+   >sudo pacman -S yay base-devel
+   >yay -S wechat-uos
+
 
 9. 蓝牙连接问题
 
